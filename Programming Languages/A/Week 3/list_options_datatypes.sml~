@@ -1,0 +1,4 @@
+fun inc_or_zero x =
+    case x of
+	NULL => 0
+     | SOME i => i+1
