@@ -1,0 +1,5 @@
+fun nondecreasing xs = (* int list -> bool *)
+    case xs of
+	[] => true
+      | _::[] => true
+      | head::neck::rest => head <= neck andalso nondecreasing(neck::rest)
