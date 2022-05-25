@@ -1,0 +1,16 @@
+datatype eval = Constant of int
+	      | Negate of exp
+	      | Add of exp
+	      | Multiply of exp
+
+fun old_eval e =
+    case e of
+	Constant i => i
+      | Negate e2 => ~ (old_eval e2)
+      | Add (e1,e2) => old_eval(e1) + old_eval(e2)
+      | Multiply(e1,e2) => old_eval(e1) * old_eval(e1,e2)
+
+fun eval e = Constant i => i
+    | Negate e2 => ~ (old_eval e2)
+    | Add (e1,e2) => old_eval(e1) + old_eval(e2)
+    | Multiply(e1,e2) => old_eval(e1) * old_eval(e1,e2
